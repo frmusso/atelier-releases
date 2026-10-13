@@ -10,7 +10,8 @@ A Mac app for running Claude Code sessions in parallel: live states, one key to 
 change traced to the session that made it.
 
 [**Download for macOS**](https://useatelier.dev/download) · [Website](https://useatelier.dev) ·
-[What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases)
+[What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases) ·
+[Support Atelier](https://useatelier.dev/support)
 
 ![Latest release](https://img.shields.io/github/v/release/frmusso/atelier-releases?include_prereleases&label=latest&color=8B5CF6)
 ![macOS 13+](https://img.shields.io/badge/macOS-13%2B-1B1B2E)
@@ -193,7 +194,7 @@ remove its data too, the folder `~/Library/Application Support/Atelier`.
 
 <div align="center">
 
-Free · Made by Francesco Musso · [useatelier.dev](https://useatelier.dev)
+Free · Made by Francesco Musso · [useatelier.dev](https://useatelier.dev) · [Support Atelier](https://useatelier.dev/support)
 
 Atelier is an independent project, not affiliated with Anthropic. Claude and Claude Code are trademarks of Anthropic.
 
