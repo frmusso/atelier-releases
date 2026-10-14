@@ -76,7 +76,7 @@ Every changed file carries the colour of the session that touched it — down to
 
 Open, edit and save files without leaving the session. When Claude edits the same file, nothing gets lost.
 
-- Fast editor with find, comments and syntax colours
+- Fast editor with find and replace, comments and syntax colours
 - Compare, keep yours or reload when Claude changes a file
 - ⌘L mentions the selected lines in the session
 
@@ -172,8 +172,10 @@ page.
 
 ## Privacy
 
-- No account, and no analytics in the app.
-- Atelier checks for updates at `useatelier.dev`; your projects, sessions and files stay on your Mac.
+- No account and no tracking. The update check at `useatelier.dev` sends the app version and whether it is the first
+  check of the day, week or month, so active installs can be counted: no identifier, nothing about your projects,
+  sessions or files, which stay on your Mac. Set the channel to **Off** in Settings › About and the update check sends nothing. Details:
+  [useatelier.dev/privacy](https://useatelier.dev/privacy).
 - Dictation is transcribed on your Mac. The optional clean-up sends the text, never the audio, to Claude Haiku through
   your own Claude Code.
 - Connectors (ClickUp) talk to their service only after you connect them; their tokens are encrypted in the Keychain.
