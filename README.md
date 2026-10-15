@@ -9,8 +9,8 @@
 A Mac app for running Claude Code sessions in parallel: live states, one key to the session waiting for you, every
 change traced to the session that made it, and the rest of your work beside them: editor, terminals, Git, Docker, Redis.
 
-[**Download for macOS**](https://useatelier.dev/download) · [Website](https://useatelier.dev) ·
-[What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases) ·
+[**Download for macOS**](https://useatelier.dev/download) · [**Try it in your browser**](https://useatelier.dev/demo) ·
+[Website](https://useatelier.dev) · [What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases) ·
 [Support Atelier](https://useatelier.dev/support)
 
 ![Latest release](https://img.shields.io/github/v/release/frmusso/atelier-releases?include_prereleases&label=latest&color=8B5CF6)
@@ -27,6 +27,9 @@ change traced to the session that made it, and the rest of your work beside them
 - **The real `claude` CLI.** Not a wrapper: your Claude Code, its status line, its commands, in real terminals.
 - **Sessions that stay alive.** Quit, update, restart: your sessions keep going.
 - **Keyboard first.** Every action a shortcut away. ⌘K finds the rest.
+
+Want a feel for it first? [**Try it live**](https://useatelier.dev/demo): the real app runs in your desktop browser,
+with scripted sessions on a sample project. Nothing to install, nothing leaves the page.
 
 This repository hosts the releases (DMG and update files) and this page; there is no source code here.
 
