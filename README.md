@@ -7,7 +7,7 @@
 **Many Claude Code sessions, never lose track.**
 
 A Mac app for running Claude Code sessions in parallel: live states, one key to the session waiting for you, every
-change traced to the session that made it.
+change traced to the session that made it, and the rest of your work beside them: editor, terminals, Git, Docker, Redis.
 
 [**Download for macOS**](https://useatelier.dev/download) · [Website](https://useatelier.dev) ·
 [What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases) ·
@@ -60,7 +60,29 @@ Click a session's chip to see its agents, shells and monitors. Open one beside t
 - Each subagent's steps as it takes them
 - Scheduled wake-ups with a countdown
 
-<img src="assets/background.png" alt="The Background tab of a session: two agents and a test run, the test output arriving live" width="100%">
+<img src="assets/background.png" alt="The Background tab of a session: two agents and a test run listed, the test run's output arriving live" width="100%">
+
+### Your containers, next to Claude
+
+Atelier finds Docker Desktop, OrbStack or Colima on its own. Read your stack's logs, see why a container stopped, and
+send the lines that matter to a session.
+
+- Logs of one container or the whole stack, errors and traces folded
+- Why it stopped: exit code, last lines, environment with secrets masked
+- Read-only: Atelier never starts, stops or runs anything in a container
+
+<img src="assets/docker.png" alt="The logs of a Docker container in Atelier: two errors selected, ready to send to a Claude session" width="100%">
+
+### Your Redis, keys and queues
+
+Atelier finds the Redis your project uses — on your Mac, in Docker or from Homebrew. Browse keys, watch your queues,
+and ask Claude why a job failed.
+
+- Keys by namespace, values pretty-printed, secrets masked until you show them
+- Queues of BullMQ, Bull, Sidekiq, Laravel, Celery, RQ, Asynq and Resque, failed jobs with their stack
+- Local only: every change asks first and can be undone
+
+<img src="assets/redis.png" alt="The failed jobs of a BullMQ queue in Atelier: the error and its stack, one click from asking Claude why it failed" width="100%">
 
 ### See who changed what
 
@@ -179,6 +201,9 @@ page.
 - Dictation is transcribed on your Mac. The optional clean-up sends the text, never the audio, to Claude Haiku through
   your own Claude Code.
 - Connectors (ClickUp) talk to their service only after you connect them; their tokens are encrypted in the Keychain.
+- Docker is read from the engine on your Mac, over its local socket and only to read: nothing leaves your Mac.
+- Redis: Atelier connects only to servers on your Mac (local ports and sockets); passwords you type are encrypted in the
+  Keychain, and nothing leaves your Mac.
 
 ## Feedback and problems
 
