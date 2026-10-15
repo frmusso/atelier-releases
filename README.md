@@ -41,7 +41,7 @@ Every session shows what it is doing. When one needs you, you know — and ⌘J 
 
 - Needs permission, has a question, working, done, failed
 - Notification center, Dock menu and banners
-- Background agents and shells, context, limits and cost
+- Context, cost and limits, for each of your Claude accounts
 
 <img src="assets/sessions.png" alt="Sessions grouped by state: two need you, two are working, one is done" width="100%">
 
@@ -116,6 +116,17 @@ Hold ⌥Space and speak. Transcription runs on your Mac, so your voice never lea
 - Off until you turn it on
 
 <img src="assets/dictation.png" alt="The dictation pill listening while Claude waits for an answer" width="100%">
+
+### Personal and work, side by side
+
+More than one Claude subscription? Pick the account as you start a session, with its limits in view. Every session
+remembers which one it runs as.
+
+- Each account's 5-hour and weekly limits, right where you choose
+- A chip on the sessions that run as another account
+- Resume, the session panel and dictation clean-up follow each session's account
+
+<img src="assets/accounts.png" alt="New Session with two Claude accounts, Personal and Work, each with its limits; Work is picked" width="100%">
 
 ### Close the app. Your sessions keep going.
 
