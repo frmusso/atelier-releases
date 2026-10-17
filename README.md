@@ -51,7 +51,7 @@ Sessions, terminals and files are tabs. Put up to three side by side and keep yo
 
 - Split view with up to three panes (⌘\\)
 - Command palette (⌘K) for files, sessions and commands
-- Context menus everywhere
+- Drag a tab out into its own window (⇧⌘O)
 
 <img src="assets/workspace.png" alt="A Claude Code session next to a file in split view" width="100%">
 
@@ -89,19 +89,20 @@ and ask Claude why a job failed.
 
 ### See who changed what
 
-Every changed file carries the colour of the session that touched it — down to the exact command.
+Every changed file carries the colour of the session that touched it — down to the exact command. Commit it right
+there.
 
-- Changes by session or by repository
-- Review with line comments sent back to Claude
-- Source Control history graph, pull request and CI chips
+- Changes by session or by repository, reviewed with line comments sent back to Claude
+- Commit and push from the panel, several repositories at once, messages written by Claude
+- Source Control: sync, branches and stashes, history graph, pull request and CI chips
 
-<img src="assets/changes.png" alt="The diff of a file Claude changed, next to the changed files coloured by session" width="100%">
+<img src="assets/changes.png" alt="The changed files coloured by session, one staged, and the commit drawer with a message Claude wrote, next to the file's diff" width="100%">
 
 ### A real editor next to Claude
 
 Open, edit and save files without leaving the session. When Claude edits the same file, nothing gets lost.
 
-- Fast editor with find and replace, comments and syntax colours
+- Find and replace, comments, Markdown preview and a JSON tree with tables
 - Compare, keep yours or reload when Claude changes a file
 - ⌘L mentions the selected lines in the session
 
@@ -146,7 +147,7 @@ off.
 | **Atelier terminal** | A fast zsh with command blocks and output triggers. |
 | **Ports, one click away** | Servers started in a terminal show their port; click to open. |
 | **Service logs** | Your project's tmux panes, read-only, next to the sessions. |
-| **Tasks become sessions** | Connectors bring your tasks in — ClickUp first, more to come. |
+| **Tasks become sessions** | Your ClickUp and Notion tasks start sessions. Read-only. |
 | **Session panel** | Model, permission mode, MCP servers and skills at a glance. |
 | **Names in step** | Rename a session in Atelier and Claude's `/resume` follows. |
 | **Make it yours** | Appearance, terminal, editor and notifications; every shortcut listed. |
@@ -162,6 +163,9 @@ off.
 | <kbd>⌥</kbd> <kbd>Space</kbd> | Dictate |
 | <kbd>⌘</kbd> <kbd>L</kbd> | Mention lines |
 | <kbd>⌘</kbd> <kbd>N</kbd> | New session |
+| <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>N</kbd> | Resume a session |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>K</kbd> | Commit |
+| <kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>M</kbd> | Message with Claude |
 
 ## Install
 
@@ -214,7 +218,12 @@ page.
   [useatelier.dev/privacy](https://useatelier.dev/privacy).
 - Dictation is transcribed on your Mac. The optional clean-up sends the text, never the audio, to Claude Haiku through
   your own Claude Code.
-- Connectors (ClickUp) talk to their service only after you connect them; their tokens are encrypted in the Keychain.
+- Git: Source Control fetches from your project's remotes, and pushes and pulls only when you ask; pull request status
+  comes from your own GitHub CLI (gh). All with your own credentials.
+- When Claude writes a commit message (✦), the staged changes and, unless you turn it off, what your sessions were
+  asked go to Claude through your own Claude Code. Files that look like secrets are left out.
+- Connectors (ClickUp, Notion) talk to their service only after you connect them; their tokens are encrypted in the
+  Keychain. Atelier only reads, and in Notion only the databases you choose.
 - Docker is read from the engine on your Mac, over its local socket and only to read: nothing leaves your Mac.
 - Redis: Atelier connects only to servers on your Mac (local ports and sockets); passwords you type are encrypted in the
   Keychain, and nothing leaves your Mac.
