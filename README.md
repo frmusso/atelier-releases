@@ -6,10 +6,10 @@
 
 **Many Claude Code sessions, never lose track.**
 
-A Mac app for running Claude Code sessions in parallel: live states, one key to the session waiting for you, every
+A desktop app for Mac and Windows that runs Claude Code sessions in parallel: live states, one key to the session waiting for you, every
 change traced to the session that made it, and the rest of your work beside them: editor, terminals, Git, Docker, Redis.
 
-[**Download for macOS**](https://useatelier.dev/download) · [**Try it in your browser**](https://useatelier.dev/demo) ·
+[**Download for macOS**](https://useatelier.dev/download) · [**Get it for Windows**](https://apps.microsoft.com/detail/9N9FX0BQ20HF) · [**Try it in your browser**](https://useatelier.dev/demo) ·
 [Website](https://useatelier.dev) · [What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases) ·
 [Support Atelier](https://useatelier.dev/support)
 
@@ -17,6 +17,7 @@ change traced to the session that made it, and the rest of your work beside them
 ![macOS 13+](https://img.shields.io/badge/macOS-13%2B-1B1B2E)
 ![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-M1%2B-EC4899)
 ![Notarized](https://img.shields.io/badge/notarized-Apple-34D399)
+![Windows 10 & 11](https://img.shields.io/badge/Windows-10%20%26%2011-1B1B2E)
 
 <img src="assets/overview.png" alt="Atelier: sessions grouped by state in the sidebar, a Claude Code session and a file side by side, changes coloured by session" width="100%">
 
@@ -180,6 +181,12 @@ off.
 4. Open a project folder and start a Claude session with ⌘N. Atelier asks for the microphone only if you turn on
    dictation (Settings › Dictation).
 
+**On Windows** (Windows 11, or Windows 10 version 2004 or later, 64-bit): install Atelier from the
+[Microsoft Store](https://apps.microsoft.com/detail/9N9FX0BQ20HF), which also keeps it up to date. It needs Claude Code installed and signed in
+(`claude` works in PowerShell); [Git for Windows](https://git-scm.com/download/win) adds changes, branches and
+history (without it Atelier still works as an editor). The DMG and ZIP here are the Mac app; the `.msix` attached to a
+release is the package sent to the Store (install Atelier from the Store, which signs it).
+
 ## Updates
 
 Atelier keeps itself up to date. It checks shortly after launch and every 6 hours (or now: **Atelier › Check for
@@ -214,19 +221,21 @@ page.
 
 - No account and no tracking. The update check at `useatelier.dev` sends the app version and whether it is the first
   check of the day, week or month, so active installs can be counted: no identifier, nothing about your projects,
-  sessions or files, which stay on your Mac. Set the channel to **Off** in Settings › About and the update check sends nothing. Details:
+  sessions or files, which stay on your computer. Set the channel to **Off** in Settings › About and the update check
+  sends nothing. On Windows the Microsoft Store installs and updates Atelier, and the app itself checks nothing. Details:
   [useatelier.dev/privacy](https://useatelier.dev/privacy).
-- Dictation is transcribed on your Mac. The optional clean-up sends the text, never the audio, to Claude Haiku through
+- Dictation is transcribed on your computer. The optional clean-up sends the text, never the audio, to Claude Haiku through
   your own Claude Code.
 - Git: Source Control fetches from your project's remotes, and pushes and pulls only when you ask; pull request status
   comes from your own GitHub CLI (gh). All with your own credentials.
 - When Claude writes a commit message (✦), the staged changes and, unless you turn it off, what your sessions were
   asked go to Claude through your own Claude Code. Files that look like secrets are left out.
 - Connectors (ClickUp, Notion) talk to their service only after you connect them; their tokens are encrypted in the
-  Keychain. Atelier only reads, and in Notion only the databases you choose.
-- Docker is read from the engine on your Mac, over its local socket and only to read: nothing leaves your Mac.
-- Redis: Atelier connects only to servers on your Mac (local ports and sockets); passwords you type are encrypted in the
-  Keychain, and nothing leaves your Mac.
+  Keychain (on Windows, with Windows' data protection). Atelier only reads, and in Notion only the databases you choose.
+- Docker is read from the engine on your computer, over its local socket (a named pipe on Windows) and only to read:
+  nothing leaves your computer.
+- Redis: Atelier connects only to servers on your computer (local ports, and sockets on a Mac); passwords you type are
+  encrypted like the connectors' tokens, and nothing leaves your computer.
 
 ## Feedback and problems
 
@@ -238,7 +247,8 @@ it).
 ## Uninstall
 
 Quit Atelier and close the sessions you still have running, move `/Applications/Atelier.app` to the Trash and, to
-remove its data too, the folder `~/Library/Application Support/Atelier`.
+remove its data too, the folder `~/Library/Application Support/Atelier`. On Windows, uninstall it from Settings ›
+Apps like any Store app.
 
 ---
 
