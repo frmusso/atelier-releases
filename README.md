@@ -99,6 +99,17 @@ there.
 
 <img src="assets/changes.png" alt="The changed files coloured by session, one staged, and the commit drawer with a message Claude wrote, next to the file's diff" width="100%">
 
+### Tasks that start themselves.
+
+Pick a ClickUp list, a Notion database or a Jira project and what a task must match. When one does, Atelier starts a
+Claude session on it in a worktree of its own, and says why.
+
+- Its own branch and worktree for each task; it never merges or pushes
+- Limits per rule, per day and across projects, and a pause near your usage limit
+- It stops to ask you, or decides and lists every choice at the end
+
+<img src="assets/automations.png" alt="The Automations tab: a rule that is on, what it watches and what Claude does, its guardrails, and its runs at work and for review" width="100%">
+
 ### A real editor next to Claude
 
 Open, edit and save files without leaving the session. When Claude edits the same file, nothing gets lost.
@@ -148,7 +159,7 @@ off.
 | **Atelier terminal** | A fast zsh with command blocks and output triggers. |
 | **Ports, one click away** | Servers started in a terminal show their port; click to open. |
 | **Service logs** | Your project's tmux panes, read-only, next to the sessions. |
-| **Tasks become sessions** | Your ClickUp and Notion tasks start sessions. Read-only. |
+| **Tasks become sessions** | Your ClickUp, Notion and Jira tasks start sessions. Read-only. |
 | **Session panel** | Model, permission mode, MCP servers and skills at a glance. |
 | **Names in step** | Rename a session in Atelier and Claude's `/resume` follows. |
 | **Make it yours** | Appearance, terminal, editor and notifications; every shortcut listed. |
@@ -230,8 +241,10 @@ page.
   comes from your own GitHub CLI (gh). All with your own credentials.
 - When Claude writes a commit message (✦), the staged changes and, unless you turn it off, what your sessions were
   asked go to Claude through your own Claude Code. Files that look like secrets are left out.
-- Connectors (ClickUp, Notion) talk to their service only after you connect them; their tokens are encrypted in the
-  Keychain (on Windows, with Windows' data protection). Atelier only reads, and in Notion only the databases you choose.
+- Connectors (ClickUp, Notion, Jira) talk to their service only after you connect them; their tokens are encrypted in
+  the Keychain (on Windows, with Windows' data protection). Atelier only reads, and in Notion and Jira only the
+  databases and projects you choose. An automation that is on reads the list, database or project it watches every few
+  minutes, from your computer, and only while Atelier is running.
 - Docker is read from the engine on your computer, over its local socket (a named pipe on Windows) and only to read:
   nothing leaves your computer.
 - Redis: Atelier connects only to servers on your computer (local ports, and sockets on a Mac); passwords you type are
