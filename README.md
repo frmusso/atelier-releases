@@ -114,7 +114,7 @@ Claude session on it in a worktree of its own, and says why.
 
 Open, edit and save files without leaving the session. When Claude edits the same file, nothing gets lost.
 
-- Find and replace, comments, Markdown preview and a JSON tree with tables
+- Find and replace, comments, Markdown preview, a JSON tree and CSV tables
 - Compare, keep yours or reload when Claude changes a file
 - ⌘L mentions the selected lines in the session
 
@@ -138,6 +138,7 @@ remembers which one it runs as.
 - Each account's 5-hour and weekly limits, right where you choose
 - A chip on the sessions that run as another account
 - Resume, the session panel and dictation clean-up follow each session's account
+- Your own claude flags on every new session, or on one account's only
 
 <img src="assets/accounts.png" alt="New Session with two Claude accounts, Personal and Work, each with its limits; Work is picked" width="100%">
 
