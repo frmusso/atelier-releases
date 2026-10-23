@@ -9,7 +9,7 @@
 A desktop app for Mac and Windows that runs Claude Code sessions in parallel: live states, one key to the session waiting for you, every
 change traced to the session that made it, and the rest of your work beside them: editor, terminals, Git, Docker, Redis.
 
-[**Download for macOS**](https://useatelier.dev/download) · [**Get it for Windows**](https://apps.microsoft.com/detail/9N9FX0BQ20HF) · [**Try it in your browser**](https://useatelier.dev/demo) ·
+[**Download for macOS**](https://useatelier.dev/download) · [**Get it for Windows**](https://apps.microsoft.com/detail/9N9FX0BQ20HF) · [**Try it in your browser**](https://useatelier.dev/demo) · [**Watch the film**](https://useatelier.dev/#film) ·
 [Website](https://useatelier.dev) · [What's new](https://useatelier.dev/changelog) · [All releases](https://github.com/frmusso/atelier-releases/releases) ·
 [Support Atelier](https://useatelier.dev/support)
 
@@ -31,6 +31,9 @@ change traced to the session that made it, and the rest of your work beside them
 
 Want a feel for it first? [**Try it live**](https://useatelier.dev/demo): the real app runs in your desktop browser,
 with scripted sessions on a sample project. Nothing to install, nothing leaves the page.
+Or [**watch the film**](https://useatelier.dev/#film): Atelier in 38 seconds, narrated, with captions.
+
+<a href="https://useatelier.dev/#film"><img src="assets/film.jpg" alt="Atelier in 38 seconds: play the narrated film on useatelier.dev" width="100%"></a>
 
 This repository hosts the releases (DMG and update files) and this page; there is no source code here.
 
