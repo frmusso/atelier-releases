@@ -69,6 +69,16 @@ Click a session's chip to see its agents, shells and monitors. Open one beside t
 
 <img src="assets/background.png" alt="The Background tab of a session: two agents and a test run listed, the test run's output arriving live" width="100%">
 
+### Send it later.
+
+Write the next prompt now and pick when it goes: in an hour, tomorrow at nine, or right after your usage limit resets. At that time Atelier types it into the session, once Claude is free.
+
+- Several per session, never two at the same minute
+- It waits while Claude works or asks, or skips that turn: your call
+- Sent by the background service, even with the app closed
+
+<img src="assets/scheduled.png" alt="The Schedule a prompt sheet over a session: the prompt, presets up to &quot;When usage resets&quot;, the session's next 24 hours on a rail" width="100%">
+
 ### Your containers, next to Claude
 
 Atelier finds Docker Desktop, OrbStack or Colima on its own. Read your stack's logs, see why a container stopped, and
