@@ -26,7 +26,7 @@ change traced to the session that made it, and the rest of your work beside them
 ## Why Atelier
 
 - **The real `claude` CLI.** Not a wrapper: your Claude Code, its status line, its commands, in real terminals.
-- **Sessions that stay alive.** Quit, update, restart: your sessions keep going.
+- **Sessions that stay alive.** Quit, update, restart: busy sessions keep going, idle ones wait under Resume.
 - **Keyboard first.** Every action a shortcut away. ⌘K finds the rest.
 
 Want a feel for it first? [**Try it live**](https://useatelier.dev/demo): the real app runs in your desktop browser,
@@ -160,9 +160,9 @@ remembers which one it runs as.
 A background service owns your terminals. Quit Atelier, install an update or restart your Mac: pick up where you left
 off.
 
-- Sessions keep running when the window closes
+- Busy sessions can keep running when their window closes
+- Idle ones wait under Resume: bring them all back in one click
 - Updates install on restart without closing sessions
-- Resume past conversations from the sidebar (⌘⇧N)
 
 <img src="assets/alive.png" alt="Atelier reopened with the same sessions still running" width="100%">
 
@@ -226,6 +226,11 @@ Rarely, a version needs Atelier's background service restarted; then Atelier doe
 About explains it and links the release page. Updates also need Atelier in the Applications folder, not in Downloads or
 a disk image.
 
+On Windows the Microsoft Store delivers updates, and Atelier asks it for them shortly after launch and every 6 hours (or
+now: **Help › Check for Updates…**). On Windows 11 24H2 or later, with automatic app updates on in the Store, Atelier
+installs the new version in the background and the footer shows **Update ready · Restart**: your sessions keep running.
+Otherwise the footer shows **Update available**, and Settings › About opens the Store page to get it.
+
 <details>
 <summary>Going back to the previous version</summary>
 
@@ -247,7 +252,8 @@ page.
 - No account and no tracking. The update check at `useatelier.dev` sends the app version and whether it is the first
   check of the day, week or month, so active installs can be counted: no identifier, nothing about your projects,
   sessions or files, which stay on your computer. Set the channel to **Off** in Settings › About and the update check
-  sends nothing. On Windows the Microsoft Store installs and updates Atelier, and the app itself checks nothing. Details:
+  sends nothing. On Windows the Microsoft Store installs and updates Atelier, and the app asks only the Store for new
+  versions: nothing goes to `useatelier.dev`. Details:
   [useatelier.dev/privacy](https://useatelier.dev/privacy).
 - Dictation is transcribed on your computer. The optional clean-up sends the text, never the audio, to Claude Haiku through
   your own Claude Code.
