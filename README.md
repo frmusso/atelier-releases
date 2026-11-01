@@ -49,6 +49,18 @@ Every session shows what it is doing. When one needs you, you know — and ⌘J 
 
 <img src="assets/sessions.png" alt="Sessions grouped by state: two need you, two are working, one is done" width="100%">
 
+### Catch up without interrupting
+
+Ask a session where it is, what's left or why it chose something. A read-only side chat answers from its conversation
+and your code, while the session keeps working, its context untouched.
+
+- Catch me up: your requests, done or not, where it is and the choices it made
+- File links that open the code, a verdict on how far it got; Help me decide when it asks you
+- Read-only: it never edits files, runs commands or interrupts the session
+- Runs on your Claude account, Sonnet by default; pick another model or account
+
+<img src="assets/ask.png" alt="Ask docked beside a session waiting for permission: a Help me decide card, then Catch me up with its two requests, one done and one waiting for your OK, where it is and the choices it made" width="100%">
+
 ### Everything side by side
 
 Sessions, terminals and files are tabs. Put up to three side by side and keep your hands on the keyboard.
@@ -58,6 +70,16 @@ Sessions, terminals and files are tabs. Put up to three side by side and keep yo
 - Drag a tab out into its own window (⇧⌘O)
 
 <img src="assets/workspace.png" alt="A Claude Code session next to a file in split view" width="100%">
+
+### Keep each front apart
+
+Working on several things in one project? Turn on workspaces for it: each one keeps its own sessions, terminals, tabs
+and split, and you switch between them in a keystroke.
+
+- New Workspace… (⌥⌘T); switch with ⌥⌘1…9 or from the Go menu
+- The others wait as cards with their sessions' states; drop a tab or a row on one to move it
+- Its own folder for new sessions and terminals; Changes shows this workspace or all
+- Off by default, turned on per project
 
 ### See what runs in the background
 
@@ -161,7 +183,7 @@ A background service owns your terminals. Quit Atelier, install an update or res
 off.
 
 - Busy sessions can keep running when their window closes
-- Idle ones wait under Resume: bring them all back in one click
+- Idle ones wait under Resume, and so can those you close to free memory: back in one click
 - Updates install on restart without closing sessions
 
 <img src="assets/alive.png" alt="Atelier reopened with the same sessions still running" width="100%">
@@ -265,10 +287,16 @@ page.
   the Keychain (on Windows, with Windows' data protection). Atelier only reads, and in Notion and Jira only the
   databases and projects you choose. An automation that is on reads the list, database or project it watches every few
   minutes, from your computer, and only while Atelier is running.
+- Ask sends a digest of a session's conversation (your requests, Claude's replies, one line per tool call, no tool
+  output, token-like strings redacted) to Claude through your own Claude Code, only when you ask about that session;
+  it may read the project's files to answer, read-only, never files that look like secrets. Its threads stay on your
+  computer.
 - Docker is read from the engine on your computer, over its local socket (a named pipe on Windows) and only to read:
   nothing leaves your computer.
 - Redis: Atelier connects only to servers on your computer (local ports, and sockets on a Mac); passwords you type are
   encrypted like the connectors' tokens, and nothing leaves your computer.
+- Claude Code compatibility notes (Settings › Claude) keep only the names and codes Claude Code sends that Atelier
+  doesn't recognize yet, on your computer: nothing is sent.
 
 ## Feedback and problems
 
