@@ -136,8 +136,8 @@ there.
 
 ### Tasks that start themselves.
 
-Pick a ClickUp list, a Notion database or a Jira project and what a task must match. When one does, Atelier starts a
-Claude session on it in a worktree of its own, and says why.
+Turn them on in Settings, then pick a ClickUp list, a Notion database or a Jira project and what a task must match.
+When one does, Atelier starts a Claude session on it in a worktree of its own, and says why.
 
 - Its own branch and worktree for each task; it never merges or pushes
 - Limits per rule, per day and across projects, and a pause near your usage limit
@@ -194,7 +194,7 @@ off.
 |---|---|
 | **Atelier terminal** | A fast zsh with command blocks and output triggers. |
 | **Ports, one click away** | Servers started in a terminal show their port; click to open. |
-| **Service logs** | Your project's tmux panes, read-only, next to the sessions. |
+| **Service logs** | Your project's tmux panes, read-only, next to the sessions. Turn them on in Settings. |
 | **Tasks become sessions** | Your ClickUp, Notion and Jira tasks start sessions. Read-only. |
 | **Session panel** | Model, permission mode, MCP servers and skills at a glance. |
 | **Names in step** | Rename a session in Atelier and Claude's `/resume` follows. |
