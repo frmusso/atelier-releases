@@ -77,9 +77,10 @@ Working on several things in one project? Turn on workspaces for it: each one ke
 and split, and you switch between them in a keystroke.
 
 - New Workspace… (⌥⌘T); switch with ⌥⌘1…9 or from the Go menu
-- The others wait as cards with their sessions' states; drop a tab or a row on one to move it
+- The others fold under their name, a dot saying when one needs you; open one to peek at its sessions, drop a tab or a
+  row on it to move it
 - Its own folder for new sessions and terminals; Changes shows this workspace or all
-- Off by default, turned on per project
+- Off by default: turn them on per project, or in every project at once
 
 ### See what runs in the background
 
